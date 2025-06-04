@@ -10,4 +10,9 @@ public function getAllProducts(){
         $products = products::all();
         return view('productFeat', ['product'=>$products]);
     }
+ public function showHomepageProducts()
+    {
+        $products = products::all();
+        return view('home', ['product' => $products]);
+    }
 }
