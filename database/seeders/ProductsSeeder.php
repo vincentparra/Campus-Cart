@@ -18,7 +18,31 @@ class ProductsSeeder extends Seeder
             'description'=>'Comfortable hoodie with school logo',
             'price'=>200,
             'imgDestination'=>'images/campusHood.jpeg',
-            'category'=>"used"
+            'category'=>"used",
+            'created_at'=>now(),
+            'updated_at'=>now()
         ]);
+        products::insert(
+            [
+            'productId'=>'PROD-002',
+            'productName'=>'Girls Uniform',
+            'description'=>'Comfortable Uniform for girls with school logo',
+            'price'=>500,
+            'imgDestination'=>'images/girlsUniform.jpg',
+            'category'=>"new",
+            'created_at'=>now(),
+            'updated_at'=>now()
+            ]);
+        products::insert(
+            [
+            'productId'=>'PROD-003',
+            'productName'=>'Boys Uniform',
+            'description'=>'Comfortable Uniform for boys with school logo',
+            'price'=>500,
+            'imgDestination'=>'images/boysUniform.jpg',
+            'category'=>"new",
+            'created_at'=>now(),
+            'updated_at'=>now()
+            ]);
     }
 }

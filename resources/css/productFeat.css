@@ -79,7 +79,8 @@ body {
 }
 
 .product_image img {
-    width: 100%;
+    width: 100px;
+    height: 100px;
     max-width: 400px;
     border-radius: 8px;
     object-fit: cover;

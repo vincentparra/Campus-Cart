@@ -14,7 +14,7 @@
 </head>
 <body>
   <div class="banner">
-    <h3>Summer Sale For All Swim Suits And Free Express Delivery - OFF 50%!</h3>
+    <h3>Summer Sale For All Selected Items  And Free Express Delivery - OFF 50%!</h3>
   </div>
 
   <div class="desktop_header">
