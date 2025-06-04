@@ -23,7 +23,7 @@
         <li><a href="#">HOME</a></li>
         <li><a href="#">CONTACT</a></li>
         <li><a href="#">ABOUT</a></li>
-        <li><a href="#">SIGN UP</a></li>
+        <li><a href="/login">SIGN UP</a></li>
       </ul>
     </nav>
   
