@@ -12,13 +12,17 @@
 
 <body>
   <!-- Top Banner -->
+  <!-- Top Banner -->
   <div class="banner">
     <h3>Summer Sale For All Selected Items And Free Express Delivery - OFF 50%!</h3>
   </div>
 
   <!-- Header -->
+
+  <!-- Header -->
   <div class="desktop_header">
     <div class="logo"><p>CampusCart</p></div>
+    <nav class="nav_links">
     <nav class="nav_links">
       <ul>
         <li><a href="#">HOME</a></li>
@@ -27,7 +31,13 @@
         <li><a href="#">SIGN UP</a></li>
       </ul>
     </nav>
+    </nav>
     <div class="search">
+      <input type="text" id="search" placeholder="What are you looking for?" />
+    </div>
+    <div class="nav-icons">
+      <a href="#"><i class="fas fa-user"></i></a>
+      <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
       <input type="text" id="search" placeholder="What are you looking for?" />
     </div>
     <div class="nav-icons">
@@ -120,3 +130,4 @@
   </script>
 </body>
 </html>
+
