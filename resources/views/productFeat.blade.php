@@ -24,15 +24,16 @@
         <li><a href="/homepage">HOME</a></li>
         <li><a href="#">CONTACT</a></li>
         <li><a href="#">ABOUT</a></li>
-        <li><a href="#">SIGN UP</a></li>
+        <form method="POST" action="/logout">
+          @csrf
+          <button type="submit" class="logout">LOGOUT</button>
+        </form>
       </ul>
     </nav>
-    <div class="search">
-      <input type="text" placeholder="What are you looking for?" />
-    </div>
     <div class="nav-icons">
-      <a href="#"><i class="fas fa-user"></i></a>
-      <a href="#"><i class="fas fa-shopping-cart"></i></a>
+      <input type="text" id="search" placeholder="What are you looking for?" />
+      <a href="/profile"><i class="fas fa-user"></i></a>
+      <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
     </div>
   </div>
 

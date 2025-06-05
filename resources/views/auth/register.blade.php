@@ -25,7 +25,8 @@
       </div>
     @endif
 
-    <input type="text" name="name" placeholder="Full Name" value="{{ old('name') }}" required>
+    <input type="text" name="firstname" placeholder="First Name" value="{{ old('firstname') }}" required>
+    <input type="text" name="lastname" placeholder="Last Name" value="{{ old('lastname') }}" required>
     <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required>
     <input type="password" name="password" placeholder="Password" required>
     <input type="password" name="password_confirmation" placeholder="Confirm Password" required>

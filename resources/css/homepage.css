@@ -93,7 +93,20 @@ body {
 .nav-icons a:hover {
     color: #db4444;
 }
-
+.logout {
+    font-size: inherit;
+    font-size: inherit;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.logout:hover {
+    color: #db4444;
+    border-bottom: 2px solid #db4444;
+}
 .hero {
     display: flex;
     justify-content: center;
