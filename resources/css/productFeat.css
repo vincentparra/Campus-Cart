@@ -1,14 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Roboto", sans-serif;
     background-color: #fdfdfd;
-    margin: 0;
+    overflow-x: hidden;
 }
 
 .banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: black;
-    color: white;
+    color: #fff;
+    height: 60px;
+    border-bottom: 1px solid #635e5e;
+}
+
+.banner h3 {
+    font-size: 14px;
     text-align: center;
-    padding: 15px;
 }
 
 .desktop_header {
@@ -26,12 +42,13 @@ body {
     font-size: 30px;
     font-weight: 700;
     color: #db4444;
+    font-family: "Roboto", sans-serif;
     cursor: pointer;
 }
 
 .nav_links ul {
-    list-style: none;
     display: flex;
+    list-style: none;
     gap: 30px;
 }
 
@@ -39,6 +56,7 @@ body {
     text-decoration: none;
     color: #333;
     font-weight: 500;
+    transition: 0.3s;
 }
 
 .nav_links li a:hover {
@@ -46,23 +64,49 @@ body {
     border-bottom: 2px solid #db4444;
 }
 
-.search input {
-    padding: 8px 12px;
-    border-radius: 8px;
-    border: 1px solid #ccc;
-    width: 100%;
+.search {
+    flex-grow: 1;
     max-width: 300px;
 }
 
+#search {
+    width: 100%;
+    padding: 8px 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
 .nav-icons a {
-    color: #333;
     font-size: 20px;
-    margin-left: 15px;
+    color: #333;
+    text-decoration: none;
     transition: color 0.3s;
 }
 
 .nav-icons a:hover {
     color: #db4444;
+}
+
+.logout {
+    font-size: inherit;
+    font-size: inherit;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.logout:hover {
+    color: #db4444;
+    border-bottom: 2px solid #db4444;
 }
 
 .product_main {
@@ -76,6 +120,7 @@ body {
     flex-wrap: wrap;
     gap: 40px;
     align-items: center;
+    margin-bottom: 20px;
 }
 
 .product_image img {

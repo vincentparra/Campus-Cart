@@ -93,6 +93,7 @@ body {
 .nav-icons a:hover {
     color: #db4444;
 }
+
 .logout {
     font-size: inherit;
     font-size: inherit;
@@ -108,95 +109,112 @@ body {
     border-bottom: 2px solid #db4444;
 }
 
-.cart_main {
-    padding: 40px 20px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-.cart_main h1 {
-    text-align: center;
-    margin-bottom: 40px;
-}
-
-.cart_container {
+.username-profile {
+    font-size: 14px;
     display: flex;
-    flex-direction: column;
-    gap: 40px;
+    justify-content: flex-end;
+    margin-right: 20px;
 }
-
-.cart_table {
-    width: 100%;
-    border-collapse: collapse;
+.username-profile span {
+    color: #333;
 }
-
-.cart_table th,
-.cart_table td {
-    border: 1px solid #ccc;
-    padding: 12px;
-    text-align: center;
-}
-
-.cart_product {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.cart_product img {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-}
-
-.cart_product span {
-    font-weight: 500;
-}
-
-.cart_table input[type="number"] {
-    width: 60px;
-    padding: 5px;
-    text-align: center;
-}
-
-.remove-icon {
-    cursor: pointer;
+.username-profile p {
     color: #db4444;
+    text-transform: capitalize;
+}
+.profile-section {
+    display: inline-flex;
+}
+.manage-account {
+    display: block;
+    border: 1px solid #f5f5f5;
+    box-shadow: 5px 10px 52px #f5f5f5;
+    width: 300px;
+    height: 300px;
+    font-size: 14px;
+    margin-left: 20px;
 }
 
-.remove-icon:hover {
-    color: #a70000;
-}
-
-.cart_summary {
-    align-self: flex-end;
-    max-width: 300px;
-    border: 1px solid #ccc;
-    padding: 20px;
-    border-radius: 10px;
-    background-color: #fff;
-}
-
-.cart_summary h2 {
-    margin-bottom: 20px;
-}
-
-.cart_summary p {
+.manage-account .management-card h3 {
+    text-align: start;
     margin-bottom: 10px;
     font-size: 16px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+.manage-account .management-card ul li {
+    list-style: none;
+    margin-left: 45px;
+    margin-bottom: 5px;
+}
+.manage-account .management-card ul li a {
+    text-decoration: none;
+    color: #333;
+}
+.manage-account .management-card ul li a:hover {
+    color: #db4444;
+}
+.edit-profile-card {
+    display: block;
+    border: 1px solid #f5f5f5;
+    box-shadow: 5px 10px 52px #f5f5f5;
+    margin-left: 50px;
+    width: 60rem;
+}
+.edit-profile-card h3 {
+    display: block;
+    font-size: 16px;
+    padding-left: 10px;
+    padding-top: 5px;
+    color: #db4444;
+    margin-left: 100px;
 }
 
-.checkout_btn {
-    width: 100%;
-    padding: 10px;
+.update-profile-form {
+    display: block;
+    margin-left: 100px;
+    margin-top: 10px;
+}
+.user-info {
+    display: inline-block;
+}
+
+.textfield {
+    display: inline-block;
+    border: none;
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 18px;
+    background-color: #f5f5f5;
+}
+.user-info-address {
+    display: block;
+    margin-top: 20px;
+}
+.user-info-password {
+    display: block;
+    margin-top: 20px;
+}
+.user-info-password h3 {
+    margin: 0;
+    font-weight: 600;
+    margin-bottom: 5px;
+    display: flex;
+    text-align: right;
+    color: #333;
+}
+.submit-button {
+    display: flex;
+    margin-top: 10px;
     background-color: #db4444;
     color: white;
+    padding: 10px 20px;
     border: none;
     border-radius: 6px;
-    font-size: 16px;
     cursor: pointer;
+    font-size: 16px;
 }
-
-.checkout_btn:hover {
+.submit-button:hover {
     background-color: #c33737;
 }

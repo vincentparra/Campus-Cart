@@ -20,17 +20,20 @@
     <div class="logo"><p>CampusCart</p></div>
     <nav class="nav_links">
       <ul>
-        <li><a href="#">HOME</a></li>
+        <li><a href="/homepage">HOME</a></li>
         <li><a href="#">CONTACT</a></li>
         <li><a href="#">ABOUT</a></li>
-        <li><a href="/login">SIGN UP</a></li>
+        <form method="POST" action="/logout">
+          @csrf
+          <button type="submit" class="logout">LOGOUT</button>
+        </form>
       </ul>
     </nav>
   
-    <div class="nav-icons">
-      <a href="#"><i class="fas fa-user"></i></a>
-      <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
+   <div class="nav-icons">
       <input type="text" id="search" placeholder="What are you looking for?" />
+      <a href="/profile/{{$profile->id}}"><i class="fas fa-user"></i></a>
+      <a href="/cart"><i class="fas fa-shopping-cart"></i></a>
     </div>
   
   </div>
