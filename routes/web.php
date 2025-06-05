@@ -5,13 +5,18 @@ use App\Http\Controllers\ProductsController;
 use App\Http\Controllers\ProductsalesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProfilesController;
+use App\Http\Controllers\CartController;
 
-Route::get('/cart', function () {
-    return view('cart');
-});
+// Route::get('/cart', function () {
+//     return view('cart');
+// });
 Route::get('/', function () {
     return view('auth.login');
 });
+
+
+Route::post('/cart/add', [CartController::class, 'addToCart'])->name('cart.add')->middleware('auth');
+Route::get('/cart', [CartController::class, 'viewCart'])->middleware('auth');
 
 Route::get('/profile/{studentId}', [ProfilesController::class, 'getProfilesById'])->middleware('auth');;
 

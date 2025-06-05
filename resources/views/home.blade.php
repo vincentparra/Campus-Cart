@@ -76,7 +76,12 @@
           <h2 id="modal-name">Product Name</h2>
           <p class="price" id="modal-price">₱0.00</p>
           <p class="description" id="modal-description">Product description goes here.</p>
-          <button class="addToCartBtn">Add to Cart</button>
+            <form action="/cart/add" method="post">
+              @csrf
+              <input type="hidden" name="product_id" id="modal-product-id" value="">
+              <input type="hidden" name="quantity" value="1">
+              <button type="submit" class="addToCartBtn">Add to Cart</button>
+            </form>
         </div>
       </div>
     </div>
@@ -110,6 +115,7 @@
       if (item) {
         document.getElementById('modal-name').textContent = item.productName;
         document.getElementById('modal-price').textContent = '₱' + item.price;
+        document.getElementById('modal-product-id').value = item.id;
         document.getElementById('modal-description').textContent = item.description || 'No description available.';
         document.getElementById('modal-image').src = `${item.imgDestination}`;
         document.getElementById('productModal').style.display = 'flex';
