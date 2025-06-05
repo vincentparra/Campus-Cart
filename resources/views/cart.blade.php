@@ -51,25 +51,32 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td class="cart_product">
-              <img src="images/campusHood.jpeg" alt="Campus Hoodie" />
-              <span>Campus Hoodie</span>
-            </td>
-            <td>₱200</td>
-            <td><input type="number" value="1" min="1" /></td>
-            <td>₱200</td>
-            <td><i class="fas fa-trash remove-icon"></i></td>
-          </tr>
-          <!-- this should be dynamic also -->
-        </tbody>
+  @forelse ($cartItems as $item)
+    <tr>
+      <td class="cart_product">
+        <img src="{{ $item->product->imgDestination }}" alt="{{ $item->product->productName }}" />
+        <span>{{ $item->product->productName }}</span>
+      </td>
+      <td>₱{{ $item->product->price }}</td>
+      <td><input type="number" value="{{ $item->quantity }}" min="1" disabled /></td>
+      <td>₱{{ $item->product->price * $item->quantity }}</td>
+      <td>
+        <form method="POST" action="">
+          @csrf
+          @method('DELETE')
+          <button type="submit"><i class="fas fa-trash remove-icon"></i></button>
+        </form>
+      </td>
+    </tr>
+  @empty
+    <tr>
+      <td colspan="5">Your cart is empty.</td>
+    </tr>
+  @endforelse
+</tbody>
       </table>
-
       <div class="cart_summary">
         <h2>Cart Total</h2>
-        <p>Subtotal: <strong>₱200</strong></p>
-        <p>Delivery: <strong>Free</strong></p>
-        <p>Total: <strong>₱200</strong></p>
         <button class="checkout_btn">Proceed to Checkout</button>
       </div>
     </div>
