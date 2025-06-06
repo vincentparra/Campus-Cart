@@ -6,6 +6,7 @@ use App\Http\Controllers\ProductsalesController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\ProfilesController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\CheckoutController;
 
 // Route::get('/cart', function () {
 //     return view('cart');
@@ -35,3 +36,5 @@ Route::post('/register', [UsersController::class, 'register']);
 Route::post('/logout', [UsersController::class, 'logout'])->name('logout');
 
 Route::post('/profile/update', [UsersController::class, 'updateProfile'])->name('profile.update')->middleware('auth');
+
+Route::get('/checkout', [CheckoutController::class, 'index'])->name('checkout.index');
